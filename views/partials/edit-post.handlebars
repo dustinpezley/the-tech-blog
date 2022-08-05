@@ -1,0 +1,46 @@
+<article class='col-11 justify-center mb-5'>
+  <h3 class='justify-left'>Edit post</h3>
+  <form class='edit-post-form mb-3'>
+    <div class='mb-3'>
+      <label for='edit-title' class='form-label'>Title</label>
+      <input
+        type='text'
+        class='form-control'
+        name='edit-title'
+        id='edit-title'
+        value='{{post.title}}'
+      />
+    </div>
+    <label for='edit-content' class='form-label'>Content</label>
+    <textarea
+      name='edit-content'
+      id='edit-content'
+      class='form-control'
+      style='height: 300px'
+    >{{post.content}}</textarea>
+  </form>
+  <div class='btn-group' role='group'>
+    <button type='submit' class='btn btn-success text-dark'><i
+        class='fa-solid fa-floppy-disk'
+      ></i></button>
+    <button type='button' class='btn-btn-danger text-dark'><i
+        class='fa-solid fa-trash-can'
+      ></i></button>
+  </div>
+</article>
+<form class='comment-form col-11 justify-center'>
+  <div class='form-floating mb-3'>
+    <textarea
+      name='comment-body form-control'
+      style='height: 100px'
+      id='comment-body'
+    ></textarea>
+    <label for='comment-body'>Comment</label>
+  </div>
+  <div>
+    <button type='submit' class='btn btn-success'>Add comment</button>
+  </div>
+</form>
+<script src='/javascript/edit-post.js'></script>
+<script src='/javascript/delete-post.js'></script>
+<script src='/javascript/comment.js'></script>

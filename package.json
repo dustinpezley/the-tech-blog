@@ -18,7 +18,8 @@
   },
   "scripts": {
     "start": "node server.js",
-    "test": "jest"
+    "test": "jest",
+    "seed": "node seeds/index.js"
   },
   "name": "challenge-12---the-tech-blog",
   "description": "CMS-style blog site",

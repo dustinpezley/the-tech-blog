@@ -35,7 +35,7 @@ router.get('/login', (req, res) => {
     return;
   }
 
-  res.render('/login');
+  res.render('login');
 });
 
 router.get('/post/:id', (req, res) => {
@@ -66,7 +66,7 @@ router.get('/post/:id', (req, res) => {
       const post = dbPostData.get({ plain: true });
       res.render('single-post', {
         post,
-        loggedIn: require.session.loggedIn,
+        loggedIn: req.session.loggedIn,
       });
     })
     .catch((err) => {

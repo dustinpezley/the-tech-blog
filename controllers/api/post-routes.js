@@ -8,6 +8,10 @@ router.get('/', (req, res) => {
     order: [['created_at', 'DESC']],
     include: [
       {
+        model: User,
+        attributes: ['username'],
+      },
+      {
         model: Comment,
         attributes: ['id', 'comment_text', 'user_id', 'post_id', 'created_at'],
         include: [
@@ -34,6 +38,10 @@ router.get('/:id', (req, res) => {
     attributes: ['id', 'title', 'content', 'created_at'],
     order: [['created_at', 'DESC']],
     include: [
+      {
+        model: User,
+        attributes: ['username'],
+      },
       {
         model: Comment,
         attributes: ['id', 'comment_text', 'user_id', 'post_id', 'created_at'],

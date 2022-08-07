@@ -1,0 +1,16 @@
+<div class='comments'>
+  {{#each this}}
+    <section class='comment card mb-3'>
+      <div
+        class='meta justify-right align-center card-header fs-6 font-monospace text-end align-middle'
+      >
+        {{user.username}}
+        on
+        {{format_date created_at}}
+      </div>
+      <div class='text card-body'>
+        {{comment_text}}
+      </div>
+    </section>
+  {{/each}}
+</div>

@@ -3,9 +3,12 @@ const { User, Post, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.get('/', (req, res) => {
-  User.findAll({
-    attributes: { exclude: ['password'] },
-  })
+  User
+    .findAll
+    //   {
+    //   attributes: { exclude: ['password'] },
+    // }
+    ()
     .then((dbUserData) => res.json(dbUserData))
     .catch((err) => {
       console.log(err);
@@ -41,14 +44,15 @@ router.get('/:id', (req, res) => {
     });
 });
 
-router.post('/', withAuth, (req, res) => {
+router.post('/', (req, res) => {
+  console.log(req.body);
   User.create({
     username: req.body.username,
     email: req.body.email,
     password: req.body.password,
   })
     .then((dbUserData) => {
-      req.sessionStore.save(() => {
+      req.session.save(() => {
         (req.session.user_id = dbUserData.id),
           (req.session.username = dbUserData.username),
           (req.session.loggedIn = true);
@@ -63,7 +67,8 @@ router.post('/', withAuth, (req, res) => {
 });
 
 // Login
-router.get('/login', withAuth, (req, res) => {
+router.post('/login', (req, res) => {
+  console.log(req);
   User.findOne({
     where: {
       email: req.body.email,
@@ -80,7 +85,7 @@ router.get('/login', withAuth, (req, res) => {
       return;
     }
 
-    require.session.save(() => {
+    req.session.save(() => {
       req.session.user_id = dbUserData.id;
       req.session.username = dbUserData.username;
       req.session.loggedIn = true;
@@ -92,7 +97,7 @@ router.get('/login', withAuth, (req, res) => {
 
 //Logout
 router.post('/logout', withAuth, (req, res) => {
-  if (req.sessionStore.loggedIn) {
+  if (req.session.loggedIn) {
     req.session.destroy(() => {
       res.status(204).end();
     });
@@ -142,3 +147,5 @@ router.delete(':/id', withAuth, (req, res) => {
       res.status(500).json(err);
     });
 });
+
+module.exports = router;

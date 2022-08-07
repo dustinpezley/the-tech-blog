@@ -45,13 +45,16 @@ User.init(
     // Hash password on new user creation
     hooks: {
       async beforeCreate(newUserData) {
-        newUserData.password = await bcrypt.hash(newUserData.password);
+        newUserData.password = await bcrypt.hash(newUserData.password, 10);
         return newUserData;
       },
 
       // Hash password on user update
       async beforeUpdate(updatedUserData) {
-        updatedUserData.password = await bcrypt.hash(updatedUserData.password);
+        updatedUserData.password = await bcrypt.hash(
+          updatedUserData.password,
+          10
+        );
         return updatedUserData;
       },
     },

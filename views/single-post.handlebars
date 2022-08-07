@@ -1,0 +1,25 @@
+<div class="d-flex justify-content-center">
+  {{> post-info post}}
+</div>
+<div class="d-flex justify-content-center border-top border-success">
+  <div class="col-10 d-flex row justify-content-around mt-5">
+    {{#if loggedIn}}
+      <form class="comment-form col-3">
+        <div class="mb-3">
+          <textarea name="comment-body" class="form-control" id="comment-body" aria-label="Add a comment" style="height: 100px" placeholder="Add a comment"></textarea>
+        </div>
+        <div>
+          <button type="submit" class="btn btn-success font-monospace">Post Comment</button>
+        </div>
+      </form>
+    {{/if}}
+
+    <div class="col-7">
+      {{> comments post.comments}}
+    </div>
+  </div>
+</div>
+
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+{{/if}}

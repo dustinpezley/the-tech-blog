@@ -19,44 +19,40 @@
     />
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
-  <body>
-    <div class='wrapper container-fluid overflow-hidden'>
-      <header class='row bg-dark mb-5'>
-        <nav class='col-12 text-light'>
+  <body class='bg-dark'>
+    <div class='wrapper container-fluid overflow-hidden bg-dark'>
+      <header class='row bg-dark mb-5 pb-5 pt-5 d-flex align-items-center'>
+        <nav class='col-9 font-monospace fs-5 ps-5'>
           <ul class='nav mb-2'>
             <li class='nav-item'>
-              <a
-                href='/'
-                class='nav-link active text-decoration-none text-light'
-              >Home</a>
+              <a href='/' class='nav-link active text-decoration-none'>Home</a>
             </li>
             {{#if loggedIn}}
               <li class='nav-item'>
                 <a
                   href='/dashboard'
-                  class='nav-link text-decoration-none text-light'
+                  class='nav-link text-decoration-none'
                 >Dashboard</a>
               </li>
               <li class='nav-item d-flex align-items-center'>
                 <button
                   id='logout'
-                  class='btn-no-style text-nowrap text-light text-decoration-none ms-1'
+                  class='btn-no-style text-nowrap text-decoration-none ms-1 nav-link'
                 >Logout</button>
               </li>
             {{else}}
               <li class='nav-item'>
-                <a
-                  href='/login'
-                  class='nav-link text-decoration-none text-light'
-                >Login</a>
+                <a href='/login' class='nav-link text-decoration-none'>Login</a>
               </li>
             {{/if}}
           </ul>
         </nav>
-        <div class='text-nowrap fs-1 ms-5 mb-5 fw-bold row d-inline-block'>
+        <div
+          class='col-3 text-nowrap fs-1 justify-content-center pe-5 fw-bold logo'
+        >
           <a
             href='/'
-            class='text-decoration-none p-1 text-dark bg-light rounded w-100 text-center p-2 font-monospace'
+            class='text-decoration-none p-1 text-dark rounded w-100 text-center p-2 font-monospace'
           >The Tech Blog</a>
         </div>
       </header>

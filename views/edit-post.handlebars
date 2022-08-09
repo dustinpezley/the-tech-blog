@@ -1,11 +1,11 @@
 <article class='d-flex flex-column align-items-center'>
-  <div class='col-10'>
+  <div class='col-10 edit-post-container'>
     <div class='mb-3'>
       <h3 class='fw-bold fs-2 font-monospace'>Edit post</h3>
     </div>
     <form class='edit-post-form mb-3'>
       <div class='mb-3 bg-dark rounded p-3'>
-        <label for='edit-title' class='form-label text-light fs-4'>Title</label>
+        <label for='edit-title' class='form-label fs-4 font-monospace'>Title</label>
         <input
           type='text'
           class='form-control'
@@ -15,7 +15,7 @@
         />
       </div>
       <div class='mb-3 bg-dark rounded p-3'>
-        <label for='edit-content' class='form-label text-light fs-4'>Content</label>
+        <label for='edit-content' class='form-label fs-4 font-monospace'>Content</label>
         <textarea
           name='edit-content'
           id='edit-content'
@@ -23,17 +23,17 @@
           style='height: 300px'
         >{{post.content}}</textarea>
       </div>
+      <div class='btn-group mb-5' role='group'>
+        <button
+          type='submit'
+          class='save-post-btn btn text-dark fs-4 p-3'
+        ><i class='fa-solid fa-floppy-disk'></i></button>
+        <button
+          type='button'
+          class='delete-post-btn btn text-dark fs-4 p-3'
+        ><i class='fa-solid fa-trash-can'></i></button>
+      </div>
     </form>
-    <div class='btn-group mb-5' role='group'>
-      <button
-        type='submit'
-        class='save-post-btn btn btn-success text-dark fs-4 p-3'
-      ><i class='fa-solid fa-floppy-disk'></i></button>
-      <button
-        type='button'
-        class='delete-post-btn btn btn-danger text-dark fs-4 p-3'
-      ><i class='fa-solid fa-trash-can'></i></button>
-    </div>
   </div>
 </article>
 <div class="d-flex justify-content-center border-top border-success">
@@ -44,12 +44,12 @@
           name='comment-body form-control'
           style='height: 100px'
           id='comment-body'
-          class="col-4 w-100"
+          class="comment-input col-4 w-100 rounded"
           placeholder="Add a comment"
         ></textarea>
       </div>
       <div>
-        <button type='submit' class='btn btn-success font-monospace'>Add comment</button>
+        <button type='submit' class='post-btn btn font-monospace'>Add comment</button>
       </div>
     </form>
     <div class="col-7">

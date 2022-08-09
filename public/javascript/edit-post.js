@@ -6,6 +6,7 @@ async function editFormHandler(event) {
   const id = window.location.toString().split('/')[
     window.location.toString().split('/').length - 1
   ];
+  console.log(title, content, id);
 
   const response = await fetch(`/api/posts/${id}`, {
     method: 'PUT',
@@ -19,7 +20,7 @@ async function editFormHandler(event) {
   });
 
   if (response.ok) {
-    document.location.replace('/dashboard');
+    document.location.replace('/dashboard/');
   } else {
     alert(response.statusText);
   }

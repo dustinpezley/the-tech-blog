@@ -1,8 +1,201 @@
+:root {
+  --retro-green: #33ff33;
+  --retro-amber: #ffb000;
+  --retro-lt-amber: #ffcc00;
+}
+
+/* SCROLLBAR CUSTOM STYLING */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  background: rgb(33, 37, 41);
+}
+
+/* track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px var(--retro-green);
+  border-radius: 10px;
+  background: transparent;
+}
+
+/* track piece */
+::-webkit-scrollbar-track-piece {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--retro-green);
+  border-radius: 10px;
+}
+
+html {
+  overflow-y: scroll;
+}
+/* SCROLLBAR END */
+
+/* HEADER AND NAV */
 .btn-no-style {
   background: none;
   border: none;
 }
 
+header {
+  border-bottom: 1px solid var(--retro-green);
+}
+
+.nav-link {
+  color: var(--retro-green);
+}
+
+.logo a {
+  background-color: var(--retro-green);
+}
+/* HEADER AND NAV END */
+
+/* HOMEPAGE */
 ol {
   list-style: none;
+}
+
+.post-header {
+  background-color: var(--retro-green);
+}
+
+.post-content {
+  color: var(--retro-green);
+}
+
+.post-comment-count {
+  color: var(--retro-lt-amber);
+}
+
+.card {
+  border: 1px solid var(--retro-green);
+}
+/* HOMEPAGE END */
+
+/* COMMENT SECTION */
+.comment-section {
+  border-top: 1px solid var(--retro-amber);
+}
+
+.meta {
+  background-color: var(--retro-green);
+  border-bottom: 1px solid var(--retro-green);
+}
+
+.text {
+  color: var(--retro-lt-amber);
+}
+
+.post-btn {
+  background: var(--retro-amber);
+}
+/* COMMENT END */
+
+/* LOGIN */
+.login-form {
+  border: 1px solid var(--retro-green);
+}
+
+.signup-form {
+  border: 1px solid var(--retro-green);
+}
+
+.signin-text {
+  color: var(--retro-green);
+}
+
+.signup-text {
+  color: var(--retro-amber);
+}
+
+.login-btn {
+  background: var(--retro-green);
+}
+
+.form-floating input {
+  background: transparent;
+  border-color: var(--retro-green);
+  color: white;
+}
+
+.form-floating input:focus {
+  background: transparent;
+  box-shadow: none;
+  border-color: var(--retro-amber);
+  color: white;
+}
+
+.form-floating label {
+  color: var(--retro-amber);
+  font-family: monospace;
+}
+/* LOGIN END */
+
+/* DASHBOARD AND EDIT */
+.post-form {
+  font-family: monospace;
+}
+
+.form-label {
+  color: var(--retro-green);
+}
+
+.form-control {
+  background: transparent;
+  border-color: var(--retro-green);
+  color: white;
+}
+
+.form-text {
+  color: var(--retro-amber);
+}
+
+.form-control:focus {
+  border-color: var(--retro-amber);
+  background: transparent;
+  box-shadow: none;
+  color: white;
+}
+
+.submit-btn {
+  background: var(--retro-green);
+}
+
+.previous-posts {
+  border-top: 1px solid var(--retro-amber);
+}
+
+.previous-post-card {
+  background: transparent;
+}
+
+.previous-post-header {
+  background: var(--retro-green);
+  font-family: monospace;
+}
+
+.previous-post-text {
+  background-color: none;
+  color: var(--retro-amber);
+}
+
+.edit-btn {
+  background: var(--retro-amber);
+}
+
+.save-post-btn {
+  background: var(--retro-green);
+}
+
+.delete-post-btn {
+  background: var(--retro-amber);
+}
+
+.comment-input {
+  border: 1px solid var(--retro-green);
+  background: transparent;
+  color: white;
 }

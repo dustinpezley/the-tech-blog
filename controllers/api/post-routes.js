@@ -58,7 +58,9 @@ router.get('/:id', (req, res) => {
     ],
   })
     .then((dbPostData) => {
-      console.log(dbPostData.user);
+      console.log('===================');
+      console.log(dbPostData.dataValues.user);
+      console.log('===================');
       if (!dbPostData) {
         res.status(404).json({ message: 'No post found.' });
         return;

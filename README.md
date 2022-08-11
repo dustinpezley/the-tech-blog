@@ -28,7 +28,13 @@ Here are some screenshots of the action:
 
 ## Credits
 
-kelektiv(bcrypt) [https://www.npmjs.com/package/bcrypt](https://www.npmjs.com/package/bcrypt)  Sequelize [https://www.npmjs.com/package/sequelize](https://www.npmjs.com/package/sequelize)  motdotla(dotenv) [https://www.npmjs.com/package/dotenv](https://www.npmjs.com/package/dotenv) Expressjs [https://www.npmjs.com/package/express](https://www.npmjs.com/package/express)  express-handlebars [https://www.npmjs.com/package/express-handlebars](https://www.npmjs.com/package/express-handlebars)  Facebook(jest) [https://www.npmjs.com/package/jest](https://www.npmjs.com/package/jest)  sidorares(mysql2) [https://www.npmjs.com/package/mysql2](https://www.npmjs.com/package/mysql2)
+kelektiv(bcrypt) [https://www.npmjs.com/package/bcrypt](https://www.npmjs.com/package/bcrypt)  
+Sequelize [https://www.npmjs.com/package/sequelize](https://www.npmjs.com/package/sequelize)  
+motdotla(dotenv) [https://www.npmjs.com/package/dotenv](https://www.npmjs.com/package/dotenv) 
+Expressjs [https://www.npmjs.com/package/express](https://www.npmjs.com/package/express)  
+express-handlebars [https://www.npmjs.com/package/express-handlebars](https://www.npmjs.com/package/express-handlebars)  
+Facebook(jest) [https://www.npmjs.com/package/jest](https://www.npmjs.com/package/jest)  
+sidorares(mysql2) [https://www.npmjs.com/package/mysql2](https://www.npmjs.com/package/mysql2)
 
 ## Contributing
 

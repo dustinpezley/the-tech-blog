@@ -2,7 +2,7 @@
 
 ## Description
 
-A simple CMS-style blog with user authentication and posting and commenting functionality. Database is currently seeed with test data.
+A simple CMS-style blog with user authentication and posting and commenting functionality. Database is currently seeded with test data.
 
 ## Table of Contents
 
